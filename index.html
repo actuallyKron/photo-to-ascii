@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-S">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <pre id="asciiTitle">
+     /\        | |   |__   __|        /\            (_|_)
+    /  \   _ __| |_     | | ___      /  \   ___  ___ _ _ 
+   / /\ \ | '__| __|    | |/ _ \    / /\ \ / __|/ __| | |
+  / ____ \| |  | |_     | | (_) |  / ____ \\__ \ (__| | |
+ /_/    \_\_|   \__|    |_|\___/  /_/    \_\___/\___|_|_|
+    </pre>
+    <!-- <h1>ASCII Art Generator</h1> -->
+
+    <div class="options-container">
+        <h2>Options:</h2>
+        <div class="option-item">
+            <label for="outputWidthSlider">Output Width: <span id="outputWidthValue">100</span> chars</label>
+            <input type="range" id="outputWidthSlider" min="20" max="500" value="100">
+        </div>
+        <div class="option-item">
+            <label for="charSetSelect">Character Set:</label>
+            <select id="charSetSelect"></select>
+        </div>
+        <div class="option-item">
+            <label for="colorPaletteButtonsContainer">Image Color Palette:</label>
+            <div id="colorPaletteButtonsContainer">
+                <!-- Palette buttons will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="input-container">
+        <div class="input-buttons">
+            <label for="imageUpload" class="upload-button">Upload Photo</label>
+            <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+            <button id="cameraButton">Take Photo</button>
+        </div>
+        <video id="cameraPreview" autoplay playsinline style="display:none;"></video>
+        <canvas id="cameraCanvas" style="display:none;"></canvas>
+    </div>
+    <img id="originalImage" src="#" alt="Original Image" style="display:none;">
+    <canvas id="imageCanvas" style="display:none;"></canvas>
+    <div class="preview-container">
+        <h2>ASCII Preview:</h2>
+        <pre id="asciiPreview"></pre>
+        <div id="downloadControls" style="display: none; text-align: center;">
+            <button id="downloadPngButton">Download as PNG</button>
+            <button id="downloadJpgButton">Download as JPG</button>            
+            <button id="downloadTxtButton">Download as TXT</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

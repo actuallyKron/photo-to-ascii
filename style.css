@@ -1,0 +1,196 @@
+body {
+    font-family: 'Courier New', Courier, monospace; /* monospace font */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #000000; 
+    color: #00FF00; 
+}
+
+h1 {
+    color: #00FF00; 
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #00FF00;
+    border: 1px solid #00FF00;
+    padding: 5px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.upload-button, #cameraButton {
+    background-color: #111;
+    color: #00FF00;
+    border: 1px solid #00FF00;
+    padding: 8px 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: center;
+    width: 140px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.upload-button:hover, #cameraButton:hover {
+    background-color: #333;
+}
+
+#cameraPreview {
+    max-width: 100%;
+    border: 1px solid #00FF00;
+    background-color: #111;
+}
+
+.options-container {
+    width: 80%;
+    max-width: 500px;
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #00FF00; /* border */
+    background-color: #111;
+}
+
+.options-container h2 {
+    color: #00FF00;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+.option-item {
+    margin-bottom: 10px;
+}
+
+.option-item label {
+    display: block;
+    margin-bottom: 5px;
+    color: #00FF00;
+}
+
+.option-item input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+.option-item select {
+    width: 100%;
+    padding: 5px;
+    background-color: #333; /* background for select */
+    color: #00FF00; 
+    border: 1px solid #00FF00; /* border */
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+.preview-container {
+    width: 90%;
+    max-width: 800px;
+    margin-top: 20px;
+    border: 1px solid #00FF00; /* border */
+    background-color: #111; /* darker background for container */
+    padding: 15px;
+    box-shadow: none; 
+}
+
+.preview-container h2 {
+    color: #00FF00; 
+    margin-top: 0;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+#asciiPreview {
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 500px; 
+    border: 1px dashed #00FF00; /* dashed green border */
+    padding: 10px;
+    background-color: #000000; /* background for preview */
+    color: #00FF00; /* text for ascii art */
+    line-height: 1.1; 
+    font-size: 10px; 
+    margin-bottom: 15px; /* add some space before the download button */
+}
+
+#asciiTitle {
+    font-family: 'Courier New', Courier, monospace;
+    color: #00FF00;
+    white-space: pre;
+    text-align: center; 
+    margin-bottom: 30px;
+    font-size: 12px;
+    line-height: 1;
+}
+
+#downloadControls button {
+    background-color: #111; 
+    color: #00FF00; 
+    border: 1px solid #00FF00; 
+    padding: 8px 15px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    margin: 10px 5px 0 5px; /* space above and around buttons */
+}
+
+#downloadControls button:hover {
+    background-color: #333; /* lighter on hover */
+}
+
+/* styles for color buttons */
+#colorPaletteButtonsContainer {
+    display: flex;
+    flex-wrap: wrap; /* buttons can wrap to the next line */
+    gap: 8px; /* spacing between buttons */
+    margin-top: 5px; /* space above the button group */
+}
+
+.palette-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px; /* rounded corners */
+    cursor: pointer;
+    font-size: 12px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out; /* transition for hover/active states */
+    box-shadow: 0 0 0 1px #00FF00; /* default border color, will be overridden by JS for text color, but good fallback */
+}
+
+.palette-button:hover {
+    transform: scale(1.1); /* enlarge on hover */
+    box-shadow: 0 0 0 2px #00FF00; 
+}
+
+.selected-palette-button {
+    outline: 2px solid #00FF00; 
+    outline-offset: 2px;
+    transform: scale(1.05); 
+    box-shadow: 0 0 5px #00FF00; /* subtle glow to the selected button */
+} 
